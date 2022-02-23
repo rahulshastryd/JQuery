@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+</head>
+
+<style>
+    .container {
+        margin: auto;
+        margin-top: 50px;
+        width: 50%;
+        border: 3px solid green;
+        padding: 10px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 justify-center">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" id="username" aria-describedby="emailHelp"
+                            placeholder="Enter email">
+                        <span id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                            else.</span>
+                    </div>
+
+                    <div id="show_error"></div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $('#submit').click(function(){
+                var user = $('#username').val();
+
+                if(user == '')
+                {
+                    $('#show_error').html('The username must not be empty');
+                    $('#show_error').css('color','red');
+                }
+
+                if(user.length <=3)
+                {
+                    $('#show_error').html('The length must be min 3 characters');
+                    $('#show_error').css('color','red');
+                }
+
+            });
+        });
+    </script>
+
+</body>
+
+</html>

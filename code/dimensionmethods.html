@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+    <style>
+        #measure{
+            width: 600px;
+            height:400px;
+            border: 10px solid blue;
+            background-color: red;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="measure"></div>
+    <button id="showWidthHeight">Check</button>
+    <br><br>
+    <input type="text" name="" id="widths">
+    <input type="text" name="" id="heights">
+
+    <script>
+        $(document).ready(function(){
+            $('#showWidthHeight').click(function(){
+                var x = '';
+                var y  = '';
+                
+                x += 'The width of the box is '+ $('#measure').width() + 'px';
+                y += 'The height of the box is '+ $('#measure').height() + 'px';
+
+                $('#widths').val(x);
+                $('#heights').val(y);
+
+                console.warn(x);
+                console.warn(y);
+                
+            });
+        });
+    </script>
+
+</body>
+</html>

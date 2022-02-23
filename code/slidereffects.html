@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+</head>
+
+<style>
+    #panel,#flip{
+        padding: 5px;
+        text-align: center;
+        background-color: rgb(200, 191, 209);
+        border: solid 1px greenyellow;
+    }
+    #panel{
+        padding: 50px;
+        display: none;
+    }
+    h1{
+        text-align: center;
+        color: red;
+        text-transform: uppercase;
+        font-size: 3 em;
+    }
+</style>
+
+<body>
+    <h1>Slide Down and Slide Up Effects</h1>
+    <div id="flip">Click for slidedown</div>
+    <div id="panel">Hello Rahul!!</div>
+</body>
+
+<script>
+    $(document).ready(function () {
+        $('#flip').click(function(){
+            $('#panel').slideDown('slow')
+            .dblclick(function(){
+                $('#panel').slideUp()
+            })
+        });
+    });
+</script>
+
+</html>

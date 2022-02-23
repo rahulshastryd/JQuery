@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="jquery-ui.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-transform: uppercase;text-align: center;">Enter Details</h1>
+    <form>
+        <fieldset>
+            <legend style="text-transform: uppercase; font-size: 1.6em;" >BioData:</legend>
+            <label for="fname">Name:</label>
+            <input type="text" id="fname" name="name"><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br><br>
+            <label for="birthday">DOB:</label>
+            <input type="text" placeholder="dd-mm-yy" id="datepicker" name="dob"><br><br>
+            <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('#datepicker').datepicker({
+                dateFormat:"dd-mm-yy",
+                changeMonth:true,
+                changeYear:true,
+                maxDate:'3Y', //3D,3W,3M
+                minDate:'-3M'
+            });
+        });
+    </script>
+
+</body>
+</html>

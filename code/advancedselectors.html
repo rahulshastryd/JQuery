@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    
+    <div style="width: 50%; margin: auto;" class="container" >
+        <ol type="1">
+            <li>Tomato</li>
+            <li>Potato</li>
+            <li>Brinjal</li>
+            <li>Onion</li>
+            <li>DrumStick</li>
+        </ol>
+        <ol id="ff">
+            <li>Tomato</li>
+            <li>Potato</li>
+            <li>Brinjal</li>
+            <li>Onion</li>
+            <li>DrumStick</li>
+        </ol>
+    </div>
+
+    <button id="btn_id1">Click</button>
+    <button id="btn_id2">Click</button>
+    <button id="btn_id3">Click</button>
+    <button id="btn_id4">Click</button>
+    <button id="btn_id5">Click</button>
+    <button id="btn_id6">Click</button>
+
+    <script>
+        $(document).ready(function () {
+            // $('*').css("backgroundColor","blue")
+            $("#btn_id1").click(function(){
+                $(".container").css({
+                    "backgroundColor":"yellow",
+                    "font-size":"150%",
+                    "font-color":"blue"
+                })
+            });
+        });
+
+        $(document).ready(function () {
+            $("#btn_id2").click(function(){
+                $(this).css({
+                    "backgroundColor":"yellow",
+                    "font-size":"150%",
+                    "font-color":"blue"
+                })
+            });
+        });
+
+        $(document).ready(function () {
+            $("#btn_id3").click(function(){
+                $(".container").css({
+                    "backgroundColor":"red",
+                    "font-size":"150%",
+                    "font-color":"blue"
+                });
+            });
+        });
+
+        $(document).ready(function () {
+            $("#btn_id4").click(function(){
+                $("[type]").css({
+                    "backgroundColor":"red",
+                    "font-size":"150%",
+                    "font-color":"blue"
+                }).hide("slow");     
+            });
+        });
+
+        $(document).ready(function(){
+            $("#btn_id5").click(function(){
+                $("li:even").css({
+                    "backgroundColor":"green",
+                    "font-size":"250%",
+                    "font-color":"blue"
+                }).animate({
+                    left: '250%',
+                    opacity: '0.5',
+                    height: '100%',
+                    width: '150%'
+                });
+                // $("[type]").css({
+                //     "backgroundColor":"green",
+                //     "font-size":"200%",
+                //     "font-color":"pink"
+                // }).hide("slow");
+                
+            });
+        });
+
+        $(document).ready(function () {
+            $('#btn_id6').click(function(){
+                $('li:first-child').css("color","#ff1793");
+                $('li:last-child').css({
+                    "font-size":"125%",
+                    "font-color":"#370d80"
+                });
+                $('#ff li:nth-child(4)').css("color","yellow");
+            })
+        });
+
+
+    </script>
+
+</body>
+</html>

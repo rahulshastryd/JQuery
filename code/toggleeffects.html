@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+</head>
+
+<style>
+    .main{
+        display: flex;
+    }
+    .red{
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+    }
+    .blue{
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+    }
+
+</style>
+
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br> Tempora beatae eligendi earum saepe corporis, inventore
+        consectetur ducimus ipsum quos! Veritatis in minima nisi ea cupiditate quos blanditiis. Architecto, nobis
+        eveniet.
+    </p>
+
+    <div class="main">
+        <div class="red"></div>
+        <div class="red"></div>
+        <div class="red"></div>
+        <div class="blue"></div>
+        <div class="blue"></div>
+        <div class="blue"></div>
+    </div>
+
+    <button id="idbtn">Click</button>
+    <button id="btn_id">Show/Hide</button>
+</body>
+
+<script>
+    $(document).ready(function () {
+        $('.red').css('backgroundColor','red')
+        $('.blue').css('backgroundColor','blue')
+
+        $('#btn_id').click(function(){
+            $('.main').toggle('slow');
+        });
+    });
+</script>
+
+</html>
